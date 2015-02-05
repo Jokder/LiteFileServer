@@ -1,0 +1,13 @@
+# Created by .gitignore support plugin (hsz.mobi)
+conf.json
+packages/*
+web/packages/*
+.pub
+.idea
+packages
+files/*
+*/packages
+*.lock
+*.deps
+*.map
+pages/*.js

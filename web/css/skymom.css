@@ -1,0 +1,80 @@
+body {
+    /*background-color: #F8F8F8;*/
+    background: url("../images/starbg.jpg");
+    color: #ffffff;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.2em;
+    margin: 15px;
+}
+
+.enforce-white{
+    color: #ffffff !important;
+}
+
+div#container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.bg-trans{
+    background: transparent !important;
+}
+
+a:link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:hover{
+    color: #ffffff !important;
+    text-decoration:none !important;
+}
+
+a:visited {
+    color: #ffffff;
+}
+
+tr.high-light:hover {
+    background-color: sienna;
+}
+
+h1, p {
+    color: #333;
+}
+
+#div_head {
+    background-color: #dcdcdc;
+}
+
+#label_search{
+    font-size: 18px;
+}
+
+#div_menu {
+    background-color: #dcdcdc;
+}
+
+ul.menu li{
+    margin-left: 5px;
+    display:inline;
+}
+
+#div-search {
+    margin-top: 5px;
+}
+
+.file-list {
+    width: 100%;
+}
+
+.first-col {
+    padding-left: 20px;
+}
+
+.table-header {
+    font-weight: bold;
+    color: orangered;
+}
