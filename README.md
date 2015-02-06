@@ -1,35 +1,33 @@
 # LiteFileServer
-Ê¹ÓÃGoogle Dart¹¹½¨µÄÇáÁ¿¼¶¡¢¼òµ¥µÄÎÄ¼þÏÂÔØ·þÎñÆ÷¡£
-²»ÐèÒª°²×°nginx/apache£¬Õ¼ÓÃ¸üÉÙµÄ×ÊÔ´¡£
+ä½¿ç”¨Google Dartæž„å»ºçš„è½»é‡çº§ã€ç®€å•çš„æ–‡ä»¶ä¸‹è½½æœåŠ¡å™¨ã€‚
+ä¸éœ€è¦å®‰è£…nginx/apacheï¼Œå ç”¨æ›´å°‘çš„èµ„æºã€‚
 
-1.°²×°dart sdk
+1.å®‰è£…dart sdk
 
-Çë²Î¿¼£º[ÕâÀï](https://www.dartlang.org/tools/download-editor.html?utm_expid=51752263-1.WpTWnsvDTEGD1RYXp5u58g.1&utm_referrer=https%3A%2F%2Fwww.dartlang.org%2Ftools%2Fsdk%2F "dark sdk")
+è¯·å‚è€ƒï¼š[è¿™é‡Œ](https://www.dartlang.org/tools/download-editor.html?utm_expid=51752263-1.WpTWnsvDTEGD1RYXp5u58g.1&utm_referrer=https%3A%2F%2Fwww.dartlang.org%2Ftools%2Fsdk%2F "dark sdk")
 
-2.Ìí¼Ópubµ½»·¾³±äÁ¿
+2.æ·»åŠ pubåˆ°çŽ¯å¢ƒå˜é‡
 
     export PATH=$PATH:/usr/lib/dart/bin
 
-3.»ñÈ¡ÏîÄ¿
+3.èŽ·å–é¡¹ç›®
 
     git clone https://github.com/Jokder/LiteFileServer.git
 
-4.ÅäÖÃ
+4.é…ç½®
 
-ÅäÖÃÎÄ¼þÊÇLiteFileServer/conf.json
+é…ç½®æ–‡ä»¶æ˜¯LiteFileServer/conf.json
 
     {
     "version": "0.0.1",
-    "port":8082,      #¶Ë¿ÚºÅ
-    "root":"web"      #Õ¾µã¸ùÄ¿Â¼
+    "port":8082,      #ç«¯å£å·
+    "root":"web"      #ç«™ç‚¹æ ¹ç›®å½•
     }
 
-ÎÄ¼þÁÐ±í´ÓÕ¾µã¸ùÄ¿Â¼ÏÂµÄfilesÄ¿Â¼ÖÐ¶ÁÈ¡¡£
+æ–‡ä»¶åˆ—è¡¨ä»Žç«™ç‚¹æ ¹ç›®å½•ä¸‹çš„filesç›®å½•ä¸­è¯»å–ã€‚
 
-5.ÔËÐÐ
+5.è¿è¡Œ
 
     cd LiteFileServer
     pub install
     nohup dart main.dart >/dev/null 2>&1 &
-
-
