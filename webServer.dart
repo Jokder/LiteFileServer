@@ -13,14 +13,14 @@ class WebServer {
   }
 
   static Map mapping = {
-      "/files":getFiles
+    "/files":getFiles
   };
 
   static void getFiles(HttpConnect connect) {
     try {
       Directory dir = new Directory(Configuration.ROOT + '/files');
       Collection<File> fileInfoList = new Collection<File>(dir.listSync(recursive:true))
-      .where((f) => !FileSystemEntity.isDirectorySync(f.path))
+      .where((f) => !(FileSystemEntity.isDirectorySync(f.path) || FileSystemEntity.isLinkSync(f.path)))
       .orderByDescending((f) => f.lastModifiedSync())
       .toCollection();
       List files = new List();
@@ -38,9 +38,9 @@ class WebServer {
             len_h = (flen / pow(1024, 3)).toStringAsFixed(2) + "GB";
           }
           files.add({
-              "path":fInfo.path.replaceAll('\\', '/').substring(Configuration.ROOT.length+1),
-              "length":len_h,
-              "lastModified":fInfo.lastModifiedSync()
+            "path":fInfo.path.replaceAll('\\', '/').substring(Configuration.ROOT.length + 1),
+            "length":len_h,
+            "lastModified":fInfo.lastModifiedSync()
           });
         }
       });

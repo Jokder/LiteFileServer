@@ -5,6 +5,7 @@
 
 var fileServer = angular.module('fileServer', [
     'ngRoute'
+
 ]);
 fileServer.config(['$routeProvider', function ($routeProvider) {
     $routeProvider

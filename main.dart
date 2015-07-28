@@ -1,5 +1,6 @@
 import "server.dart";
-void main(){
+
+void main() {
   WebServer server = new WebServer();
   server.startServer();
 }
