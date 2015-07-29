@@ -9,3 +9,4 @@ import "package:stream/stream.dart";
 
 part 'configuration.dart';
 part 'webServer.dart';
+part 'filesApi.dart';

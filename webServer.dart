@@ -2,7 +2,7 @@ part of server;
 
 class WebServer {
   void startServer() {
-    StreamServer webServer = new StreamServer(homeDir:Configuration.ROOT, uriMapping:mapping);
+    StreamServer webServer = new StreamServer(homeDir:Configuration.ROOT, uriMapping:mapping, filterMapping:filterMapping);
     webServer.start(port:Configuration.PORT);
   }
 
@@ -13,7 +13,11 @@ class WebServer {
   }
 
   static Map mapping = {
-    "/files":getFiles
+    "/files":getFiles,
+    "/upload":FilesApi.upload
+  };
+
+  static Map filterMapping = {
   };
 
   static void getFiles(HttpConnect connect) {

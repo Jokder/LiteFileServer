@@ -2,10 +2,12 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Lite File Server</title>
     <link rel="icon" href="images/favicon.ico" mce_href="images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="images/favicon.ico" mce_href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/skymom.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="bower_components/angular-ui-tree/dist/angular-ui-tree.min.css">
 
     <script src="bower_components/json3/lib/json3.min.js"></script>
@@ -16,20 +18,22 @@
     <script src="controls/indexCtrl.js"></script>
 </head>
 <body ng-app="fileServer" ng-controller="indexCtrl">
-<div id="container">
-    <table class="file-list" cellspacing="0" cellpadding="5">
-        <tr>
-            <td class="first-col table-header">File Name</td>
-            <td class="table-header">File Length</td>
-            <td class="table-header">Last Modified</td>
-        </tr>
-        <tr class="high-light" ng-repeat="file in datasource.files">
-            <td class="first-col">
-                <a ng-href="../{{file.path}}" target="_blank" ng-bind="file.path|filename"></a></td>
-            <td ng-bind="file.length"></td>
-            <td ng-bind="file.lastModified"></td>
-        </tr>
-    </table>
+<div class="container">
+    <div class="row">
+        <table class="file-list col-xs-6 col-sm-6 col-md-12" cellspacing="0" cellpadding="5">
+            <tr>
+                <td class="first-col table-header">File Name</td>
+                <td class="table-header">File Length</td>
+                <td class="table-header">Last Modified</td>
+            </tr>
+            <tr class="high-light text-white" ng-repeat="file in datasource.files">
+                <td class="first-col">
+                    <a ng-href="../{{file.path}}" target="_blank" ng-bind="file.path|filename"></a></td>
+                <td ng-bind="file.length"></td>
+                <td ng-bind="file.lastModified"></td>
+            </tr>
+        </table>
+    </div>
 </div>
 </body>
 </html>

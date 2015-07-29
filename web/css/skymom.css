@@ -9,6 +9,10 @@ body {
     margin: 15px;
 }
 
+.text-white{
+    color: #fff;
+}
+
 .enforce-white{
     color: #ffffff !important;
 }
