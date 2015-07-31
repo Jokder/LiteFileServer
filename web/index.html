@@ -23,14 +23,14 @@
         <table class="file-list col-xs-6 col-sm-6 col-md-12" cellspacing="0" cellpadding="5">
             <tr>
                 <td class="first-col table-header">File Name</td>
-                <td class="table-header">File Length</td>
+                <td class="table-header length-right">File Length</td>
                 <td class="table-header">Last Modified</td>
             </tr>
-            <tr class="high-light text-white" ng-repeat="file in datasource.files">
+            <tr class="high-light text-white nowrap" ng-repeat="file in datasource.files">
                 <td class="first-col">
                     <a ng-href="../{{file.path}}" target="_blank" ng-bind="file.path|filename"></a></td>
-                <td ng-bind="file.length"></td>
-                <td ng-bind="file.lastModified"></td>
+                <td ng-bind="file.length" class="length-right"></td>
+                <td ng-bind="file.lastModified | date:'yyyy-MM-dd HH:mm:ss' "></td>
             </tr>
         </table>
     </div>

@@ -33,13 +33,13 @@ class WebServer {
           int flen = fInfo.lengthSync();
           String len_h = "";
           if (flen < pow(1024, 1)) {
-            len_h = (flen / pow(1024, 0)).toStringAsFixed(2) + "B";
+            len_h = (flen / pow(1024, 0)).toStringAsFixed(2) + " B";
           } else if (flen >= pow(1024, 1) && flen < pow(1024, 2)) {
-            len_h = (flen / pow(1024, 1)).toStringAsFixed(2) + "KB";
+            len_h = (flen / pow(1024, 1)).toStringAsFixed(2) + " KB";
           } else if (flen >= pow(1024, 2) && flen < pow(1024, 3)) {
-            len_h = (flen / pow(1024, 2)).toStringAsFixed(2) + "MB";
+            len_h = (flen / pow(1024, 2)).toStringAsFixed(2) + " MB";
           } else {
-            len_h = (flen / pow(1024, 3)).toStringAsFixed(2) + "GB";
+            len_h = (flen / pow(1024, 3)).toStringAsFixed(2) + " GB";
           }
           files.add({
             "path":fInfo.path.replaceAll('\\', '/').substring(Configuration.ROOT.length + 1),
